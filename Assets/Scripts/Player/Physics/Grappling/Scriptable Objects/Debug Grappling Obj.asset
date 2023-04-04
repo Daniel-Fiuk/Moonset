@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b239fc5dd4a74a4f8cc92b18898a8a1, type: 3}
+  m_Name: Debug Grappling Obj
+  m_EditorClassIdentifier: 
+  hookPrefab: {fileID: 2317133558453492672, guid: 9aed8ce02ae927442ab8562374460420,
+    type: 3}
+  minLength: 5
+  maxLength: 75
+  maxDistanceMultiple: 0.8
+  minDistanceMultiple: 0.25
+  springForce: 4.5
+  damperForce: 7.5
+  massScale: 15
+  lungeForce: 5
+  lungeGravityComp: 0.35
+  scaleSpeed: 2
+  drawSpeed: 120
+  sampleRate: 32
+  curveSize: 0.35
+  curveShape:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 0.9999968
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7
+      value: -0.5000048
+      inSlope: -0.429863
+      outSlope: -0.429863
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  hookSounds:
+  - {fileID: 8300000, guid: dfe950e1a4456e54f89582c4af97d08f, type: 3}
+  - {fileID: 8300000, guid: 2d1186b2fcbe5bb4d86d66c9320a0556, type: 3}
+  - {fileID: 8300000, guid: 626d908aa5050044ab3e729092889ef8, type: 3}
+  hookVolume: 1
+  hookPitchRange:
+    x: 0.9
+    y: 1.1
+  zipSounds:
+  - {fileID: 8300000, guid: 1de91e79c29095d4bb7bb79c590e58a4, type: 3}
+  - {fileID: 8300000, guid: 092294276f241a2439a8b57efcc36034, type: 3}
+  - {fileID: 8300000, guid: 309fab7ef44c6fb4da3180696d1531e8, type: 3}
+  zipVolume: 1
+  zipPitchRange:
+    x: 0.9
+    y: 1.1
+  whooshSounds:
+  - {fileID: 8300000, guid: 5f9734df1b5f69246aaabd8e22158784, type: 3}
+  - {fileID: 8300000, guid: fd625d96e6f083c43b778a9b23518ed4, type: 3}
+  - {fileID: 8300000, guid: 66112ba4eedc8f3499ef3686452da695, type: 3}
+  - {fileID: 8300000, guid: b6d938a12d8eacf46a4056ec6e69ecba, type: 3}
+  - {fileID: 8300000, guid: 36235ac6f0b35cf4387f1efd1258ad0b, type: 3}
+  whooshVolume: 1
+  whooshPitchRange:
+    x: 0.9
+    y: 1.1
