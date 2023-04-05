@@ -17,6 +17,23 @@ MonoBehaviour:
     material: {fileID: 2100000, guid: 188b56369097e844090b5333587a97f3, type: 2}
     materialPassIndex: 0
     renderEvent: 500
+--- !u!114 &-1965028164322331584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337acbed401b4a24ba6fb6eeec5be2e6, type: 3}
+  m_Name: ColorBlindPalette
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    material: {fileID: 2100000, guid: 9cb7a1bd1ec5f9f4e99ec716ab1cd400, type: 2}
+    materialPassIndex: -1
+    renderEvent: 500
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337acbed401b4a24ba6fb6eeec5be2e6, type: 3}
   m_Name: Palette
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     material: {fileID: 2100000, guid: 3e50db117d397f44bb237f6b2c984403, type: 2}
     materialPassIndex: -1
@@ -75,9 +92,10 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
   - {fileID: -4904706401425992952}
-  - {fileID: -273522464910322333}
   - {fileID: 2309619059959204974}
-  m_RendererFeatureMap: adc0de57c6d2eee508536b9f83fbeebb6355ee70c44034fc6e0c57534c6a0d20
+  - {fileID: -273522464910322333}
+  - {fileID: -1965028164322331584}
+  m_RendererFeatureMap: adc0de57c6d2eee508536b9f83fbeebb6e0c57534c6a0d206355ee70c44034fc40f4edb34bd1bae4
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}

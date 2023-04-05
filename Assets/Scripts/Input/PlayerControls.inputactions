@@ -112,6 +112,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Filter Mode",
+                    "type": "Button",
+                    "id": "fb793941-03b6-46ec-8ce4-0e97ea9598d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -442,6 +451,17 @@
                     "processors": "",
                     "groups": "Mouse And Keyboard",
                     "action": "Textures",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df18db3b-2b80-4ab2-9eb7-cc7767abdab8",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Filter Mode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
