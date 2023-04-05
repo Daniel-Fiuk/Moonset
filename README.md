@@ -43,6 +43,7 @@ Your goal is to manuver your way to the end of the level guided by yellow waypoi
 
 ## Additional Effects
 ### ToonShading - Constantine
+This effect is also done within our Palette shader. The effect that is analogous to colour ramping is caused by removing any dithering and anti-aliasing from the edges caused by the colour limitations. It creates a very flat look. This is accomplished through the color correction.
 
 ### Outline - Constantine
 
