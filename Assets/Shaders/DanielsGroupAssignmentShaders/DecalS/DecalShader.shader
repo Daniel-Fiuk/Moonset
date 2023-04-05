@@ -60,10 +60,13 @@ Shader "Custom/DecalShader"
 
 				//Get the Main Texture UV
                 float2 _MainUVs = i.uv;
+
+				_MainUVs.xy -= _MainTex_ST.xy / 2;
+				
 				x = _MainUVs.x *= _MainTex_ST.x;
 				y = _MainUVs.y *= _MainTex_ST.y;
-
-				_MainUVs += _MainTex_ST.wz;
+				
+                _MainUVs.xy += _MainTex_ST.xy / 2;
 
                 //Rotate the Texture UV
 				x = _MainUVs.x * cos(_MainTexRotation) - _MainUVs.y * sin(_MainTexRotation);
@@ -71,8 +74,13 @@ Shader "Custom/DecalShader"
 				_MainUVs.x = x;
 				_MainUVs.y = y;
 
+                _MainUVs += _MainTex_ST.wz;
+				
 				//Get the Decal Texture UV
                 float2 _DecalUVs = i.uv;
+				
+                _DecalUVs.xy -= _DecalUVs.xy / 2;
+
 				x = _DecalUVs.x *= _DecalTex_ST.x;
 				y = _DecalUVs.y *= _DecalTex_ST.y;
 
@@ -83,6 +91,8 @@ Shader "Custom/DecalShader"
 				y = _DecalUVs.x * sin(_DecalTexRotation) + _DecalUVs.y * cos(_DecalTexRotation);
 				_DecalUVs.x = x;
 				_DecalUVs.y = y;
+
+                _DecalUVs.xy += _DecalUVs.xy / 2;
 
 			    fixed4 a = tex2D(_MainTex, _MainUVs);
                 fixed4 b = tex2D(_DecalTex, _DecalUVs) * _ShowDecal;

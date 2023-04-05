@@ -4,7 +4,7 @@ Shader "Hidden/Fog"
     {
         _MainTex ("Texture", 2D) = "white" {}
 		_Color ("Fog Color", COLOR) = (1, 1, 1, 1)
-		_Inensity ("Fog Inensity", Range(0, 10000)) = 1
+		_Inensity ("Fog Inensity", Range(0, 100000)) = 1
 	}
     SubShader
     {
@@ -18,6 +18,12 @@ Shader "Hidden/Fog"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+
+			sampler2D _MainTex;
+            float _Inensity;
+            float4 _Color;
+            uniform sampler2D _CameraDepthTexture; //Depth Texture
+			const int Density;
 
             struct appdata
             {
@@ -38,12 +44,6 @@ Shader "Hidden/Fog"
                 o.uv = v.uv;
                 return o;
             }
-
-            sampler2D _MainTex;
-            float _Inensity;
-            float4 _Color;
-            uniform sampler2D _CameraDepthTexture; //Depth Texture
-			const int Density;
 
             fixed4 frag (v2f i) : SV_Target
             {
