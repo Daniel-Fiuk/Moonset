@@ -5,6 +5,7 @@
 We were one of the groups who decided before this course began to work with URP when developing our game. Unfortunatly we could not work every shader and effect into our project but we did compile them in a separate project.
 
 [SRP Project Repo](https://github.com/ShockWaveGamer/Graphics-SRP-Final.git)
+[Video Link](https://youtu.be/2VK6lD7LrpA)
 
 ### Controls
 - WASD / Movement
@@ -46,7 +47,8 @@ Your goal is to manuver your way to the end of the level guided by yellow waypoi
 This effect is also done within our Palette shader. The effect that is analogous to colour ramping is caused by removing any dithering and anti-aliasing from the edges caused by the colour limitations. It creates a very flat look. This is accomplished through the color correction.
 
 ### Outline - Constantine
-
+  The implementation used in a version of our palette shader worked by combining a sobel convolution matrix and sampling the z buffer.  (some external code referenced for the sobel kernel, we didn't end up using this shader), the version in the standard render pipeline project creates a duplicate mesh and extrudes it while layering behind the original to create the outline
+  
 ### Rim Lighting - Daniel
   Using the rim lighting presented in the lectures as a base. I modified it to be compatable with HLSL. By comparing the view direction and the vertex normals, the dot product we cas set the colors of the object.
 ![image](https://user-images.githubusercontent.com/88565667/229961296-706bb99d-ab50-4625-9ef8-f91c411377e3.png)
@@ -59,7 +61,8 @@ This effect is also done within our Palette shader. The effect that is analogous
 
 ## Additional Post Processing Effects
 ### Pixelation - Constantine
-
+   Sadly this shader was impossible to implement in our base project due to the limitations of URP/BlitMaterialFeature, so we have done this effect in the standard renderer project. The effect works by using several blits, downsampling and upsampling the rendertexture output of a camera with point/no filtering to avoid blur on the upscale.
+   
 ### Fog - Daniel
   By reffrenceing the depthmap of the scene camera, we can mutiply the white fade by a fog color. We can then add this ontop of the camera picture to create a fog effect.
 ![image](https://user-images.githubusercontent.com/88565667/229961878-b6950c1f-b892-4c25-8366-e7a277e660a2.png)
