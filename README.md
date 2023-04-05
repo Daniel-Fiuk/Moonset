@@ -32,6 +32,9 @@ Your goal is to manuver your way to the end of the level guided by yellow waypoi
 
 ## Visual Effects
 ### Particles - Constantine
+  A custom particle texture and shader were created. We were able to overwrite our game's lack of transparency by locally rendering the transparent effect. The particle effect is used to guide players towards checkpoints, so it has eye catching effects such as a gradual change in scale and rotation.
+![image](https://user-images.githubusercontent.com/88565667/229964297-c13a127c-a4b8-4190-8347-4cb7690a3a4b.png)
+![image](https://user-images.githubusercontent.com/88565667/229964348-7a551318-230a-4173-9fe6-38a4d5aa33c7.png)
 
 ### Decals - Daniel
   I used the base of the decal shader taught in the lectures. However it has been modified into a vertex / fragment shader compatible with HLSL. I've also added the ability to translate, rotate, and scale. By manipulating the uv's of both the main texture and decal texture. 
